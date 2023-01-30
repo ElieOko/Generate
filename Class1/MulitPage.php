@@ -23,6 +23,22 @@ $pdf->Image('../template.jpg',0,0,0);
 
 AddText($pdf,ucwords($name), 0,80, 'C', 'Helvetica','B',30,3,84,156);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 CreatePage($pdf,'Mahammad Haneef');
 
 CreatePage($pdf,'Minaal');
