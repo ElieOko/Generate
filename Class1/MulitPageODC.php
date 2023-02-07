@@ -94,11 +94,11 @@ function CreatePage($pdf, $params)
         $pdf->SetCreator('Haneef Puttur');
         $dateFull = "";
         // Add background image for PDF
-        $pdf->Image('../template-certificat.jpg', 0, 0, -210);
+        $pdf->Image('../al.png', 0, 0, -210);
 
         //Add a Name to the certificate
 
-        AddText($pdf, ucwords($name), 69, 340, 'L', 'Helvetica', 'B', 32, 3, 84, 156);
+        AddText($pdf, ucwords($name), 69, 345, 'L', 'Helvetica', 'B', 32, 3, 84, 156);
 
         if ($is_student) {
             $student = "Etudiant";
@@ -110,14 +110,14 @@ function CreatePage($pdf, $params)
             AddText($pdf, $msg, 69, 373, 'L', 'Helvetica', '', 14, 3, 84, 156);
         }
 
-        AddText($pdf, $formation, 127, 404, 'L', 'Helvetica', 'B', 14, 3, 84, 156);
+        AddText($pdf, $formation, 127, 405, 'L', 'Helvetica', 'B', 14, 3, 84, 156);
 
         if ($date1 == $date2) {
             $dateFull = "le {$date1}";
         } else {
             $dateFull = "du {$date1} au {$date2}";
         }
-        AddText($pdf, $dateFull, 147, 420, 'L', 'Helvetica', '', 14, 3, 84, 156);
+        AddText($pdf, $dateFull, 147, 422, 'L', 'Helvetica', '', 14, 3, 84, 156);
         AddText($pdf, $head, 69, 582, 'L', 'Helvetica', 'B', 14, 3, 84, 156);
     } catch (\Throwable $th) {
         //throw $th;
